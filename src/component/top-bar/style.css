@@ -1,0 +1,16 @@
+.top-bar-logo {
+    margin: 0 10px;
+    border-radius: 50%;
+  }
+  .topbar-container {
+    margin: 0 !important;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .navbar {
+    justify-content: space-between !important;
+    padding-right: 20px;
+  }
+  

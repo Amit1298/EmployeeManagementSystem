@@ -2,8 +2,11 @@ import React from 'react'
 
 import './style.css';
 import { Button, Form } from 'react-bootstrap';
+import {useNavigate} from 'react-router-dom';
+
 
 const SignIn = () => {
+    const navigate = useNavigate();
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -16,12 +19,10 @@ const SignIn = () => {
             };
         }
         const name = localStorage.getItem('username');
-        const paswrd = localStorage.getItem('password');
-        if (user.username === name && paswrd === user.password) {
-            alert('Signin Successfully');
-        } else {
-            alert('Fail to Success');
-        }
+        const pswrd = localStorage.getItem('password');
+        if(user.username === name && pswrd === user.password) {
+            navigate('/dashboard');
+          }
     };
     return (
         <div className='container'>
